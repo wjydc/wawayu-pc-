@@ -1,0 +1,184 @@
+html{
+	font-size: 100px;
+	font-family: my;
+	min-width: 14.47rem;
+}
+*{
+	margin:0;
+	padding: 0;
+}
+.auto{
+	margin: 0 auto;	
+}
+.center{
+	text-align: center;
+}
+.block{
+	display: block;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+a{
+	text-decoration: none;
+}
+@font-face{
+	font-family: my;
+	src:url(../css/方正兰亭黑简.woff) format('woff'),
+		url(../css/方正兰亭黑简.TTF) format('truetype');
+}
+@font-face{
+	font-family: content;
+	src:url(../css/方正兰亭超细黑简体.woff) format('woff'),
+		url(../css/方正兰亭超细黑简体.TTF) format('truetype');
+}
+.container{
+	width: 19.20rem;
+	margin: 0 auto;
+}
+nav{
+	width: 100%;
+	height: 0.91rem;
+	/*line-height: 0.91rem;*/
+	background-color: #ffffff;
+	text-align: center;
+}
+.nav_logo img{
+	width: 2.23rem;
+	height: 0.52rem;
+	margin-top: .195rem;
+}
+nav>a{
+	display: inline-block;
+	margin: 0 .33rem;
+	font-size: .26rem;
+	line-height: .91rem;
+	vertical-align: top;
+	color: #000;
+	text-decoration: none;
+	font-weight: bold;
+}
+.center{
+	text-align: center;
+}
+.cookingbox{
+	width: 100%;
+	margin-bottom: 1rem;
+	background-image: url(../image/bg-01.png);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	padding-top: .32rem;
+}
+.box{
+	width: 14.47rem;
+	font-size: 0.4795rem;
+}
+.title{
+	height: 0.5rem;
+	margin-bottom: 0.63rem;
+}
+.content{
+	color: #5c5c5c;
+	font-size: 0.35rem;
+	margin-bottom: 0.35rem;
+	margin-top: 0.3rem;
+}
+.product{
+	font-size: 0.45rem;
+	margin-bottom: .9rem;
+}
+.content2{
+	color: #5c5c5c;
+	font-family: content;
+	font-weight: bold;
+	font-size: 0.3rem;
+	margin-bottom: 0.35rem;
+	margin-top: 0.3rem;
+	text-indent: 0.7rem;
+	line-height: 0.5rem;
+}
+.content1{
+	font-family: content;
+	font-weight: bold;
+	font-size: 0.25rem;
+	color: #6e6e6e;
+	margin-bottom: 0.3rem;
+	line-height: 0.4rem;
+	text-indent: 0.5rem;
+}
+.picbox{
+	width: 8rem;
+	height: 6rem;
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+}
+.picbox img{
+	width: 100%;
+	height: 100%;
+}
+.foot{
+	min-width: 14.77rem;
+	padding-bottom: 0.57rem;
+	
+}
+.foot p{
+	font-size: 0.12rem;
+	color: #afafb3;
+}
+.foot p:first-child{
+	margin-bottom: 0.2rem;
+}
+.totop{
+	width:0.63rem;
+	height:1.47rem;
+	position:fixed;
+	bottom:0.21rem;
+	right:0.21rem;
+	z-index: 100;
+}
+
+.totop .public a{
+	color:#29b572;
+	font-size:0.1rem;
+	text-align:center;
+	background:#fff;
+	width:0.63rem;
+	height:0.819rem;
+}
+
+.totop .public a img{
+	width: 70%;
+	height: 40%;
+	margin:0 0.1rem 0.1rem;
+	padding-top:0.168rem;
+}
+
+.color_white{
+	color: #fff;
+}
+.color_yellow{
+	color: #fbf204;
+}
+.totop .returntop{
+	cursor:pointer;
+	width:0.63rem;
+	height:0.672rem;
+	border:0;
+	background:url(http://www.jingyingba.com/Public/Home/images/returntotop.png) center no-repeat #29b572
+	}
+.totop .publicimg{
+	width:1.911rem;
+	height:1.806rem;
+	left:-2.1rem;
+	top:-0.21rem;
+	position:absolute;
+	border:none;
+	display:none
+}
+.totop .publicimg img{
+	width: 100%;
+	height: 100%;
+}

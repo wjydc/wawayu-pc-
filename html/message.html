@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<style>
+		html{
+			/*font-size: 100px;*/
+		}
+		#msg_box{
+			width: 600px;
+			/*height: 500px;*/
+			border-radius: 10px;
+			border: 1px solid #ccc;
+			overflow: hidden;
+			position: fixed;
+			text-align: center;
+		}
+		#msg_title{
+			text-align: center;
+			font-weight: bolder;
+			font-size: 20px;
+			line-height: 36px;
+			background-color: #000;
+			border-bottom: 1px solid #ccc;
+			color: #fbf204;
+			margin-bottom: 20px;
+			position: relative;
+		}
+		.msg_close{
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			color: #fff;
+			font-family: arial;
+			font-size: 12px;
+			line-height: 100%;
+			cursor: pointer;
+		}
+		#msg_left{
+			width: 150px;
+			float: left;
+		}
+		#msg_right{
+			width: 450px;
+			float: left;
+			padding-right: 60px;
+			box-sizing: border-box;
+		}
+		#msg_left>label{
+			text-align: right;
+			letter-spacing: 16px;
+			line-height: 32px;
+			font-size: 18px;
+			display: block;
+		}
+		#msg_name,#msg_phone{
+			width: 100%;
+			font-size: 16px;
+			margin: 4px 0;
+		}
+		#msg_package_box{
+			line-height: 32px;
+		}
+		#msg_package_box>label:not(label:last-child){
+			font-size: 16px;
+			margin-right: 8px;
+		}
+		#msg_content{
+			margin-top: 8px;
+			resize: none;
+			width: 100%;
+			height: 250px;
+			font-size: 16px;
+		}
+		#msg_reset,#msg_submit{
+			width: 80px;
+			font-size: 16px;
+			padding: 10px 20px;
+			margin: 20px;
+		}
+		#msg_test_box{
+			text-align: left;
+			clear: both;
+			font-size: 0;
+		}
+		#msg_test_font{
+			width: 150px;
+			text-align: right;
+			display: inline-block;
+			letter-spacing: 16px;
+			line-height: 32px;
+			font-size: 18px;
+		}
+		#msg_test{
+			width: 150px;
+			font-size: 16px;
+			margin: 4px 0;
+		}
+		#msg_test_img{
+			border: 1px solid #ccc;
+			cursor: pointer;
+			margin: 0 174px 0 10px;
+			position: relative;
+			top: 6px;
+		}
+	</style>
+</head>
+<body>
+	<button>message-box</button>
+	<form id="msg_box">
+		<div id="msg_title">留言咨询<span class="msg_close">X</span></div>
+		<div id="msg_left">
+			<label for="msg_name">姓名：</label>
+			<label for="msg_phone">电话：</label>
+			<label>套餐：</label>
+			<label for="msg_content">内容：</label>
+		</div>
+		<div id="msg_right">
+			<input type="text" name="msg_name" id="msg_name">
+			<input type="text" name="msg_phone" id="msg_phone">
+			<div id="msg_package_box">
+				<input type="radio" name="msg_package" class="msg_package" id="msg_package_one" value="1" checked="checked">
+				<label for="msg_package_one">套餐一</label>
+				<input type="radio" name="msg_package" class="msg_package" id="msg_package_two" value="2">
+				<label for="msg_package_two">套餐二</label>
+				<input type="radio" name="msg_package" class="msg_package" id="msg_package_three" value="3">
+				<label for="msg_package_three">套餐三</label>
+				<input type="radio" name="msg_package" class="msg_package" id="msg_package_four" value="4">
+				<label for="msg_package_four">套餐四</label>
+				<input type="radio" name="msg_package" class="msg_package" id="msg_package_five" value="5">
+				<label for="msg_package_five">套餐五</label>
+			</div>
+			<textarea name="msg_content" id="msg_content"></textarea>
+		</div>
+		<div id="msg_test_box">
+			<label id="msg_test_font" for="msg_test">验证码：</label>
+			<input type="text" name="msg_test" id="msg_test" value="" />
+			<canvas id="msg_test_img" width="100" height="22"></canvas>
+		</div>
+		<input type="reset" name="msg_reset" id="msg_reset" value="重置" />
+		<input type="button" name="msg_submit" id="msg_submit" value="提交" />
+	</form>
+</body>
+<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<script>
+var msgBox = $("<form/>").attr("id","msg_box").html('<div id="msg_title">留言咨询<span class="msg_close">X</span></div><div id="msg_left"><label for="msg_name">姓名：</label><label for="msg_phone">电话：</label><label>套餐：</label><label for="msg_content">内容：</label></div><div id="msg_right"><input type="text" name="msg_name" id="msg_name"><input type="text" name="msg_phone" id="msg_phone"><div id="msg_package_box"><input type="radio" name="msg_package" id="msg_package_one" value="1"><label for="msg_package_one">套餐一</label><input type="radio" name="msg_package" id="msg_package_two" value="2"><label for="msg_package_two">套餐二</label><input type="radio" name="msg_package" id="msg_package_three" value="3"><label for="msg_package_three">套餐三</label><input type="radio" name="msg_package" id="msg_package_four" value="4"><label for="msg_package_four">套餐四</label><input type="radio" name="msg_package" id="msg_package_five" value="5"><label for="msg_package_five">套餐五</label>	</div><textarea name="msg_content" id="msg_content"></textarea>	</div><input type="reset" name="msg_reset" id="msg_reset" value="重置" /><input type="button" name="msg_submit" id="msg_submit" value="提交" />');
+$("button").click(function(){
+	msgBox.appendTo($("body"));
+})
+$("body").on("mousedown","#msg_title",function(e){
+	_this = $("#msg_box");
+	var cW = e.clientX - _this[0].offsetLeft;
+	var cH = e.clientY - _this[0].offsetTop;
+	console.log(e);
+	console.log(_this);
+	$(document).on("mousemove",function(e){
+		e.stopPropagation;
+		e.preventBubble;
+		_this.css({
+			"left": e.clientX - cW,
+			"top": e.clientY - cH,
+		})
+	})
+	$(document).on("mouseup",function(e){
+		console.log(e);
+		$(document).off("mousemove");
+	})
+})
+</script>
+</html>
